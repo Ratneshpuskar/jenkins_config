@@ -1,28 +1,68 @@
 jenkins:
-  systemMessage: "Jenkins configured automatically by Jenkins\n\n"
+  systemMessage: "Jenkins configured automatically"
   numExecutors: 2
   scmCheckoutRetryCount: 3
   mode: NORMAL
 
+  # Security and user setup
   securityRealm:
     local:
       allowsSignup: false
       users:
         - id: admin
-          password: admin@123
-          
+          password: admin
+
+  # Authorization settings
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+
+  # Tool configurations
   tools:
+    maven:
+      installations:
+        - name: "Maven_3.9.9"
+          properties:
+            - installSource:
+                installers:
+                  - maven:
+                      id: "3.9.9"
+                      url: "https://repo.maven.apache.org/maven2"
     git:
       installations:
         - name: "DefaultGit"
           home: "/usr/bin/git"
+    docker:
+      installations:
+        - name: "DefaultDocker"
+          properties:
+            - installSource:
+                installers:
+                  - dockerToolInstaller:
+                      id: "latest"
 
+  # Plugin installations
+  plugins:
+    - id: workflow-aggregator
+      version: latest
+    - id: git
+      version: latest
+    - id: maven-plugin
+      version: latest
+    - id: docker-plugin
+      version: latest
+    - id: credentials
+      version: latest
+
+# Credentials section can be defined separately if needed
 credentials:
   system:
     domainCredentials:
       - credentials:
           - usernamePassword:
+              id: dockerhub_credentials
               username: ratneshpuskar@gmail.com
               password: Premkumar@2
               scope: SYSTEM
-              description: Credentials for git
+              description: "Docker Hub credentials"
+
