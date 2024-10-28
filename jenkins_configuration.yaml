@@ -1,0 +1,43 @@
+jenkins:
+  systemMessage: "Jenkins configured automatically by Jenkins\n\n"
+  numExecutors: 2
+  scmCheckoutRetryCount: 3
+  mode: NORMAL
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: admin@123
+
+  tools:
+    maven:
+      installations:
+        - name: "Maven"    # Name to reference this Maven in jobs
+          properties:
+            - installSource:
+                installers:
+                  - maven:
+                      id: "3.9.9"  # Specify the Maven version
+                      url: "https://repo.maven.apache.org/maven2"  # Optional custom URL
+    git:
+      installations:
+        - name: "DefaultGit"
+          home: "/usr/bin/git"
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              username: datlabharath92@gmail.com
+              password: 1112541800548Bb@123
+              scope: SYSTEM
+              description: Credentials for git
+          - usernamePassword:
+              id: dockerhubpwd     # ID to reference in pipelines
+              username: bharathkamal
+              password: scs51241B
+              scope: SYSTEM
+              description: Credentials for Docker Hub
