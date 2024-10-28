@@ -12,34 +12,14 @@ jenkins:
         - id: admin
           password: admin
 
-  # Authorization settings
-  authorizationStrategy:
-    loggedInUsersCanDoAnything:
-      allowAnonymousRead: false
 
   # Tool configurations
-  tools:
-    maven:
-      installations:
-        - name: "Maven_3.9.9"
-          properties:
-            - installSource:
-                installers:
-                  - maven:
-                      id: "3.9.9"
-                      url: "https://repo.maven.apache.org/maven2"
+  tool:
     git:
       installations:
         - name: "DefaultGit"
           home: "/usr/bin/git"
-    docker:
-      installations:
-        - name: "DefaultDocker"
-          properties:
-            - installSource:
-                installers:
-                  - dockerToolInstaller:
-                      id: "latest"
+
 
   # Plugin installations
   plugins:
