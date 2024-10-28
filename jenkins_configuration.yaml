@@ -10,6 +10,12 @@ jenkins:
       users:
         - id: admin
           password: admin@123
+          
+  tools:
+    git:
+      installations:
+        - name: "DefaultGit"
+          home: "/usr/bin/git"
 
 credentials:
   system:
