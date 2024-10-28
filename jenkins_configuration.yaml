@@ -18,7 +18,7 @@ jenkins:
     git:
       installations:
         - name: "DefaultGit"
-          home: "/usr/bin/git"
+          githome: /usr/bin/git
 
 
   # Plugin installations
