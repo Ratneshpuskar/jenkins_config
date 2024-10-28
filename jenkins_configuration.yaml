@@ -9,7 +9,7 @@ jenkins:
       allowsSignup: false
       users:
         - id: admin
-          password: admin
+          password: admin@123
 
 
 
@@ -32,11 +32,6 @@ credentials:
   system:
     domainCredentials:
       - credentials:
-          - usernamePassword:
-              username: datlabharath92@gmail.com
-              password: 1112541800548Bb@123
-              scope: SYSTEM
-              description: Credentials for git
           - usernamePassword:
               id: dockerhubpwd     # ID to reference in pipelines
               username: bharathkamal
