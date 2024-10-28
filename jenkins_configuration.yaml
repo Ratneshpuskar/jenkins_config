@@ -21,19 +21,6 @@ jenkins:
           githome: /usr/bin/git
 
 
-  # Plugin installations
-  plugins:
-    - id: workflow-aggregator
-      version: latest
-    - id: git
-      version: latest
-    - id: maven-plugin
-      version: latest
-    - id: docker-plugin
-      version: latest
-    - id: credentials
-      version: latest
-
 # Credentials section can be defined separately if needed
 credentials:
   system:
