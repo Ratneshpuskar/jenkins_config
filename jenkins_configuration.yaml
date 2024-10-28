@@ -16,7 +16,7 @@ credentials:
     domainCredentials:
       - credentials:
           - usernamePassword:
-              username: git@git.com
-              password: ${git_password}
+              username: ratneshpuskar@gmail.com
+              password: Premkumar@2
               scope: SYSTEM
               description: Credentials for git
