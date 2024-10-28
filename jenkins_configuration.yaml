@@ -11,21 +11,12 @@ jenkins:
         - id: admin
           password: admin@123
 
-
-
-  tools:
-    maven:
-      installations:
-        - name: "Maven"    # Name to reference this Maven in jobs
-          properties:
-            - installSource:
-                installers:
-                  - maven:
-                      id: "3.9.9"  # Specify the Maven version
-                      url: "https://repo.maven.apache.org/maven2"  # Optional custom URL
-    git:
-      installations:
-        - name: "DefaultGit"
-          home: "/usr/bin/git"
-
-
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              username: git@git.com
+              password: ${git_password}
+              scope: SYSTEM
+              description: Credentials for git
