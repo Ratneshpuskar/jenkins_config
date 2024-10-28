@@ -9,7 +9,11 @@ jenkins:
       allowsSignup: false
       users:
         - id: admin
-          password: admin@123
+          password: admin
+
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
 
   tools:
     maven:
