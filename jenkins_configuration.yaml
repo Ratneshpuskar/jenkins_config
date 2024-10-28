@@ -28,13 +28,4 @@ jenkins:
         - name: "DefaultGit"
           home: "/usr/bin/git"
 
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - usernamePassword:
-              id: dockerhubpwd     # ID to reference in pipelines
-              username: bharathkamal
-              password: scs51241B
-              scope: SYSTEM
-              description: Credentials for Docker Hub
+
