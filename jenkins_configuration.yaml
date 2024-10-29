@@ -19,26 +19,26 @@ tool:
         home: /usr/bin/git
 
   maven:
-      installations:
-        - name: "Maven"
-          home: /opt/maven
-          properties:
-            - installSource:
-                installers:
-                  - maven:
-                      id: "maven3"
-                      version: "3.9.9"
+    installations:
+      - name: "Maven"
+        home: /opt/maven
+        properties:
+          - installSource:
+              installers:
+                - maven:
+                    id: "maven3"
+                    version: "3.9.9"
 
-  gradle:
-      installations:
-        - name: "Gradle6"
-          home: /opt/gradle
-          properties:
-            - installSource:
-                installers:
-                  - gradle:
-                      id: "gradle6"
-                      version: "6.8.3"
+  # gradle:
+  #   installations:
+  #     - name: "Gradle6"
+  #       home: /opt/gradle
+  #       properties:
+  #         - installSource:
+  #             installers:
+  #               - gradle:
+  #                   id: "gradle6"
+  #                   version: "6.8.3"
 
 # Credentials configuration
 credentials:
