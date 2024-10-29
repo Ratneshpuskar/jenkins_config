@@ -18,10 +18,10 @@ tool:
       - name: "Maven"
         home: /opt/maven
   
-  # git:
-  #   installations:
-  #     - name: git
-  #       home: /usr/bin/git
+  git:
+    installations:
+      - name: git
+        home: /usr/bin/git
 
 
   # gradle:
