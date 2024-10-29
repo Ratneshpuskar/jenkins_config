@@ -30,28 +30,14 @@ tool:
     globalSettingsProvider: "standard"
     settingsProvider: "standard"
         
-  # maven:
-  #   installations:
-  #     - name: "Maven-3.9.9"
-  #       properties:
-  #         - "hudson.tools.InstallSourceProperty":
-  #             installers:
-  #               - "hudson.tasks.Maven$MavenInstaller":
-  #                   id: "3.9.9"
-  #                   url: "https://downloads.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip"
-  #                   subdir: "apache-maven-3.9.9"
-
-
-  # gradle:
-  #   installations:
-  #     - name: "Gradle6"
-  #       home: /opt/gradle
-  #       properties:
-  #         - installSource:
-  #             installers:
-  #               - gradle:
-  #                   id: "gradle6"
-  #                   version: "6.8.3"
+  gradle:
+    installations:
+    - name: "Gradle"
+      properties:
+      - installSource:
+          installers:
+          - gradleInstaller:
+              id: "8.11-rc-1"
 
 # Credentials configuration
 credentials:
