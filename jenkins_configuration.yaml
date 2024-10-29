@@ -12,7 +12,7 @@ jenkins:
         - id: admin
           password: admin
 
-tool:
+tools:
   git:
     installations:
       - name: git
