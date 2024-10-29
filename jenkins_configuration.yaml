@@ -11,7 +11,10 @@ jenkins:
       users:
         - id: admin
           password: admin
-          apiToken: "your_generated_api_token_here"
+
+  # API Token configuration
+  apiToken:
+    tokenGenerationOnCreation: true
 
   # Tool configurations
   tool:
@@ -21,14 +24,26 @@ jenkins:
           home: /usr/bin/git
     maven:
       installations:
-        - name: "Maven 3.6.3"
-          home: /usr/share/maven
+        - name: "Maven3"
+          home: /opt/maven
+          properties:
+            - installSource:
+                installers:
+                  - maven:
+                      id: "maven3"
+                      version: "3.8.1"
     gradle:
       installations:
-        - name: "Gradle 6.7"
-          home: /usr/share/gradle
+        - name: "Gradle6"
+          home: /opt/gradle
+          properties:
+            - installSource:
+                installers:
+                  - gradle:
+                      id: "gradle6"
+                      version: "6.8.3"
 
-# Credentials section
+# Credentials configuration
 credentials:
   system:
     domainCredentials:
