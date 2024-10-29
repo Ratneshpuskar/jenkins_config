@@ -17,12 +17,7 @@ tool:
     installations:
       - name: "Maven"
         home: /opt/maven
-        properties:
-          - installSource:
-              installers:
-                - maven:
-                    id: "maven3"
-                    version: "3.9.9"
+  
   # git:
   #   installations:
   #     - name: git
