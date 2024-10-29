@@ -13,21 +13,21 @@ jenkins:
           password: admin
 
 tool:
-  git:
+  maven:
     installations:
-      - name: git
-        home: /usr/bin/git
-
-  # maven:
+      - name: "Maven"
+        home: /opt/maven
+        properties:
+          - installSource:
+              installers:
+                - maven:
+                    id: "maven3"
+                    version: "3.9.9"
+  # git:
   #   installations:
-  #     - name: "Maven"
-  #       home: /opt/maven
-  #       properties:
-  #         - installSource:
-  #             installers:
-  #               - maven:
-  #                   id: "maven3"
-  #                   version: "3.9.9"
+  #     - name: git
+  #       home: /usr/bin/git
+
 
   # gradle:
   #   installations:
