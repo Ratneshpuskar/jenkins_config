@@ -17,6 +17,18 @@ tool:
     installations:
       - name: git
         home: /usr/bin/git
+
+  # maven:
+  #   installations:
+  #   - name: "Maven"
+  #     properties:
+  #     - installSource:
+  #         installers:
+  #         - maven:
+  #             id: "3.9.9"
+  # mavenGlobalConfig:
+  #   globalSettingsProvider: "standard"
+  #   settingsProvider: "standard"
         
   # maven:
   #   installations:
