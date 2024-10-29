@@ -16,7 +16,11 @@ tool:
   maven:
     installations:
       - name: "Maven"
-        installAutomatically: true
+      properties:
+        - installSource:
+          installers:
+            - maven:
+                id: "3.9.9"
   
   git:
     installations:
