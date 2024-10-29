@@ -16,33 +16,6 @@ jenkins:
   apiToken:
     tokenGenerationOnCreation: true
 
-  # Tool configurations
-  tool:
-    git:
-      installations:
-        - name: "DefaultGit"
-          home: /usr/bin/git
-    maven:
-      installations:
-        - name: "Maven3"
-          home: /opt/maven
-          properties:
-            - installSource:
-                installers:
-                  - maven:
-                      id: "maven3"
-                      version: "3.8.1"
-    gradle:
-      installations:
-        - name: "Gradle6"
-          home: /opt/gradle
-          properties:
-            - installSource:
-                installers:
-                  - gradle:
-                      id: "gradle6"
-                      version: "6.8.3"
-
 # Credentials configuration
 credentials:
   system:
