@@ -16,7 +16,8 @@ tool:
   maven:
     installations:
       - name: "Maven"
-        home: /opt/maven
+        installAutomatically: true
+        version: "latest"
   
   git:
     installations:
