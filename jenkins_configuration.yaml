@@ -12,9 +12,11 @@ jenkins:
         - id: admin
           password: admin
 
-  # API Token configuration
-  apiToken:
-    tokenGenerationOnCreation: true
+tool:
+  git:
+    installations:
+      - name: git
+        home: /usr/bin/git
 
 # Credentials configuration
 credentials:
@@ -27,9 +29,3 @@ credentials:
               password: "Premkumar@2"
               scope: SYSTEM
               description: "Docker Hub credentials"
-          - usernamePassword:
-              id: git_credentials
-              username: "ratneshpuskar"
-              password: "Premkumar@2"
-              scope: SYSTEM
-              description: "Git credentials"
