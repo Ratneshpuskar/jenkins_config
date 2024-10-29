@@ -12,22 +12,22 @@ jenkins:
         - id: admin
           password: admin
 
-tools:
+tool:
   git:
     installations:
       - name: git
         home: /usr/bin/git
 
-  maven:
-    installations:
-      - name: "Maven"
-        home: /opt/maven
-        properties:
-          - installSource:
-              installers:
-                - maven:
-                    id: "maven3"
-                    version: "3.9.9"
+  # maven:
+  #   installations:
+  #     - name: "Maven"
+  #       home: /opt/maven
+  #       properties:
+  #         - installSource:
+  #             installers:
+  #               - maven:
+  #                   id: "maven3"
+  #                   version: "3.9.9"
 
   # gradle:
   #   installations:
