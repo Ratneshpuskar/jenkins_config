@@ -17,10 +17,10 @@ tool:
     installations:
       - name: "Maven"
         properties:
-          - installSource:
+          - "hudson.tools.InstallSourceProperty":
             installers:
-              - maven:
-                  id: "3.9.9"
+              - "hudson.tasks.Maven$MavenInstaller":
+                id: "3.9.9"
   
   git:
     installations:
