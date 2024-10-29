@@ -11,25 +11,37 @@ jenkins:
       users:
         - id: admin
           password: admin
-
+          apiToken: "your_generated_api_token_here"
 
   # Tool configurations
   tool:
     git:
       installations:
         - name: "DefaultGit"
-          githome: /usr/bin/git
+          home: /usr/bin/git
+    maven:
+      installations:
+        - name: "Maven 3.6.3"
+          home: /usr/share/maven
+    gradle:
+      installations:
+        - name: "Gradle 6.7"
+          home: /usr/share/gradle
 
-
-# Credentials section can be defined separately if needed
+# Credentials section
 credentials:
   system:
     domainCredentials:
       - credentials:
           - usernamePassword:
               id: dockerhub_credentials
-              username: ratneshpuskar@gmail.com
-              password: Premkumar@2
+              username: "ratneshpuskar"
+              password: "Premkumar@2"
               scope: SYSTEM
               description: "Docker Hub credentials"
-
+          - usernamePassword:
+              id: git_credentials
+              username: "ratneshpuskar"
+              password: "Premkumar@2"
+              scope: SYSTEM
+              description: "Git credentials"
