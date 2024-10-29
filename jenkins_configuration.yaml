@@ -17,7 +17,7 @@ tool:
     installations:
       - name: "Maven"
         installAutomatically: true
-        version: "latest"
+        version: "3.9.9"
   
   git:
     installations:
