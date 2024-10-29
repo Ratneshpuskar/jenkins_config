@@ -15,12 +15,14 @@ jenkins:
 tool:
   maven:
     installations:
-      - name: "Maven"
+      - name: "Maven-3.9.9"
         properties:
           - "hudson.tools.InstallSourceProperty":
-            installers:
-              - "hudson.tasks.Maven$MavenInstaller":
-                id: "3.9.9"
+              installers:
+                - "hudson.tasks.Maven$MavenInstaller":
+                    id: "3.9.9"
+                    url: "https://downloads.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.zip"
+                    subdir: "apache-maven-3.9.9"
   
   git:
     installations:
