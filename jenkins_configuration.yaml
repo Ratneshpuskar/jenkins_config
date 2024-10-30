@@ -85,5 +85,5 @@ credentials:
               id: dockerhub_credentials
               username: "ratneshpuskar"
               password: "Premkumar@2"
-              scope: SYSTEM
+              scope: GLOBAL
               description: "Docker Hub credentials"
